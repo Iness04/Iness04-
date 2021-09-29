@@ -1,0 +1,29 @@
+nav ul
+{
+	list-style-type: none;
+	font-family: verdana;
+	margin: 0px;
+	padding: 0px;
+
+}
+
+nav li 
+{
+	float: left;
+	width: 100px;
+	height: 40px;
+	border: 1px solid #CCCCCC;
+	text-align: center;
+}
+
+nav li a 
+{
+	display: block;
+	text-decoration: none;
+	background-color: #333333;
+	color: white;
+}
+
+nav li a:hover{
+background-color: #3388BB;
+}
