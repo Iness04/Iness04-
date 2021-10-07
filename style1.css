@@ -1,62 +1,151 @@
 body
 {background-image: url(Pure-CSS3-Gradient-Background-Animation.gif);
 background-size: cover;
+padding: 0px;
+margin: 0px;
 }
 
-nav{
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: auto;
-}
-
-nav ul
+nav > ul 
 {
-	list-style-type: none;
-	font-family: verdana;
 	margin: 0px;
 	padding: 0px;
-	text-align: center;
-
 }
-
 nav li 
 {
-	float: left;
-	margin: auto;
-	padding: 0;
-	border: 1px solid #CCCCCC;
+	list-style-type: none;
 }
-
-nav li a 
+nav > ul > li 
 {
-	display: block;
+	float: left;
+	position: relative;
+	margin-top: 0px;
+}
+.submenu
+{
+	display: none;
+}
+nav input
+{
+	display: none;
+}
+.menu-mobile
+{
+	display: none;
+}
+nav 
+{
+	width: 100%;
+	background-color: blueviolet;
+	text-align: center;
+	margin: 0px;
+}
+nav > ul::after
+{
+	content: "";
+	display: table;
+	clear: both;
+
+}
+nav a 
+{
+	display: inline-block;
 	text-decoration: none;
-	background-color: #AF7AC5;
-	padding: 5px;
-	width: 100px;
+}
+nav > ul > li > a 
+{
+	margin: 0px;
+	padding: 20px 30px;
 	color: ghostwhite;
 }
+nav li:hover .submenu
+{
+	display: inline-block;
+	position: absolute;
+	top: 100%;
+	left: 0px;
+	padding: 0px;
+	z-index: 100000;
 
-nav li a:hover{
-background-color: #3388BB;
-color: darkblue;
+}
+.submenu li 
+{
+	border-bottom: 1px solid #CCC;
+}
+.submenu li a 
+{
+	padding: 15px 30px;
+	font-size: 13px;
+	color: black;
+	width: 150px;
 }
 
-nav ul li ul 
-{display: none;
-height: auto;
-margin: 0;
-padding: 0;}
+.site1 :hover
+{
+	border-top: 5px solid #0070bb;
+	background-color: rgba(228, 77, 38, 0.15);
+}
+.site2 :hover
+{	
+	border-top: 5px solid #0070bb;
+	background-color: rgba(000, 112, 192, 0.15)
+}
+.site3:hover
+{
+	border-top: 5px solid #0070bb;
+	background-color: rgba(241, 211, 79, 0.15)
 
-nav ul li:hover ul {
+}
+.cv :hover
+{
+	border-top: 5px solid #0070bb;
+	background-color: rgba(220, 220, 220, 0.15);
+}
+.menu :hover
+{
+	border-top: 5px solid #0070bb;
+	background-color: rgba(220, 220, 220, 0.15);}
+
+nav > ul > li:hover a 
+{
+	padding: 15px 30px 20px 30px;
+}
+
+.site3 .submenu
+{
+	background-color: rgb(255, 79, 186);
+}
+.submenu li:hover a 
+{
+	color: #EEE;
+	font-weight: bold;
+}
+
+nav input:checked ~ ul 
+{
 	display: block;
-	position: relative;
-	top: 0;
-	left: center;
 }
-nav li:hover ul li{
-	float: none;
+@media screen and (max-width : 680px)
+{
+	.menu-mobile{
+		display: block;
+		color: #FFF;
+		background-color: rgba(255, 20, 147, 1);
+		text-align: center;
+		padding: 12px 0;
+	}
+	nav ul{
+		display: none;
+	}
+	nav ul li,nav ul li a {
+		width: 100%;
+		text-align: center;
+
+	}
+	nav ul li a,nav ul li:hover a{
+		padding: 10px 0px 10px 0px;
+	}
+	nav li:hover .submenu{
+		display: block;
+		position: static;
+	}
 }
-
-
